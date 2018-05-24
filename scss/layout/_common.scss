@@ -1,0 +1,388 @@
+#wrapper {
+	overflow: hidden;
+	position: relative;
+}
+
+.container {
+	max-width: 1290px;
+	margin: 0 auto;
+	padding: 0 15px;
+
+}
+
+body {
+	
+	@include media ('>=tablet') {
+		line-height: 2;
+	}
+}
+
+h1 {
+	
+	@include media ('>=tablet') {
+		font-size: 35px;
+	}
+	
+	@include media ('>=desktop') {
+		font-size: 42px;
+	}
+}
+
+h2 {
+	
+	@include media ('>=tablet') {
+		font-size: 36px;
+	}
+}
+
+a {
+	@include animate(color)
+	
+	text-decoration: none;
+}
+
+ul {
+	@extend %listreset;
+}
+
+.market-outer {
+	@include media ('>=tablet') {
+		padding:0 0 24px;
+	}
+	
+	.row {
+		border-top: 4px solid $gold;
+		
+		@include media ('>=tablet') {
+			overflow: hidden;
+		}
+	}
+	
+	.col-img {
+
+		@include media ('>tablet') {
+			float: left;
+			width: 50%;
+			margin: 0 25px 5px 0;
+		}
+		
+		@include media ('>=widescreen') {
+			margin: 0 48px 0 0;
+		}
+	}
+	
+	.img-text-bottom {
+		max-width: 250px;
+		display: inline-block;
+		vertical-align: top;
+		font: 12px/1.6666 $base-font-serif;
+		color: $gray;
+		padding-left: 24px;
+	}
+	
+	img {
+		margin: 0 0 16px;
+		width: 100%;
+	}
+	
+	h1 {
+		font-weight: 600;
+		text-transform: uppercase;
+		margin: 0 0 18px;
+		line-height: 1;
+	}
+	
+	.col-text {
+		padding: 20px 0;
+		overflow: hidden;
+		
+		@include media ('>=desktop') {
+			padding: 46px 40px 0 0;
+		}
+	}
+	
+	.text-heading {
+		display: block;
+		font-weight: normal;
+		font: 20px/1.1 $base-font-sans-serif;
+		padding: 0 0 15px;
+		
+		@include media ('>=desktop') {
+			padding: 0 0 50px;
+		}
+	}
+	
+	p {
+		margin: 0 0 10px;
+		
+		@include media ('>=widescreen') {
+			margin: 0 0 32px;
+		}
+	}
+}
+
+.commynity-outer {
+	padding: 0 0 40px;
+	
+	@include media ('>=tablet') {
+		padding: 0 0 85px;
+	
+	}
+}
+
+.commynity {
+	max-width: 650px;
+	margin: 0 auto 47px;
+	
+	h2 {
+		font-weight: 400;
+		margin: 0 0 17px;
+	}
+}
+
+.carousel {
+	font-size: 12px;
+	color: $gray;
+	padding: 0 0 64px;
+	background-color: #f7f6f4;
+	padding: 30px 10px 20px;
+	position: relative;
+	margin: 0 0 40px;
+	
+	@include media ('>=tablet') {
+		margin: 0 0 64px;
+		padding: 36px 40px 33px;
+	}
+	
+	&:after {
+		content: " ";
+		position: absolute;
+		width: 1px;
+		height: 10px;
+		background-color: $black;
+		top: 28px;
+		left: 167px;
+		
+		@include media ('>=tablet') {
+				top: 42px;
+				left: 243px;
+		}
+	}
+	
+	.slick-prev {
+		@include animate(color)
+		
+		background-color: transparent;
+		border: none;
+		position: absolute;
+		top: -41px;
+		left: 135px;
+		font-size: 17px;
+		outline: none;
+		
+		@include media ('>=tablet') {
+			top: -90px;
+			left: 171px;
+			font-size: 29px;
+		}
+		
+		&:hover {
+			color: $gold;
+		}
+		
+		&:before {
+			font-family: 'icomoon';
+			content: "\e901";
+		}
+	}
+	
+	.slick-next {
+		@include animate(color)
+		
+		background-color: transparent;
+		position: absolute;
+		border: none;
+		top: -41px;
+		left: 170px;
+		font-size: 17px;
+		outline: none;
+		
+		@include media ('>=tablet') {
+			top: -90px;
+			left: 216px;
+			font-size: 29px;
+		}
+		
+		&:hover {
+			color: $gold;
+		}
+		
+		&:before {
+			font-family: 'icomoon';
+			content: "\e902";
+		}
+	}
+	
+	.card-img {
+		margin: 0 auto 21px;
+		
+		img {
+			width: 100%;
+		}
+	}
+	
+	a {
+		display: inline-block;
+		vertical-align: top;
+		color: $blue;
+		font: 16px/1.5 $base-font-sans-serif;
+		text-decoration: underline;
+		padding: 0 0 3px;
+		
+		&:hover {
+			color: $gold;
+		}
+	}
+	
+	.slick-slide {
+		margin: 0 10px;
+	}
+	
+	.slick-slider {
+		margin: 0 -10px;
+	}
+	.preview-artists {
+		max-width: 130px;
+		text-transform: uppercase;
+		display: inline-block;
+		vertical-align: middle;
+		text-decoration: none;
+		color: $black;
+		font-size: 12px;
+		font-family: $font-Proxima-Nova;
+		font-weight: 700;
+		letter-spacing: 1.2px;
+		padding: 0 0 20px;
+		
+		@include media ('>=tablet') {
+			padding: 0 0 48px;
+		}
+	}
+}
+
+.crown {
+	text-align: center;
+}
+
+.journal {
+	padding: 0 0 40px;
+	
+	@include media ('>=tablet') {
+		padding: 0 0 78px;
+	}
+	
+	.heading {
+		display: block;
+		text-transform: uppercase;
+		text-align: center;
+		color: $gold;
+		font-weight: 700;
+		font: 12px/1 $font-Proxima-Nova;
+		padding: 0 0 30px;
+		position: relative;
+
+		&:before {
+			position: absolute;
+			content: "";
+			width: 110px;
+			height: 3px;
+			background-color: #403d3e;
+			top: 19px;
+			left: 50%;
+			text-align:center;
+			transform: translate(-50%, -50%);
+		}
+		
+		@include media ('>=tablet') {
+			padding: 0 0 65px;
+		}
+	}
+	
+	.row {
+		text-align: center;
+		
+		@include media ('>=tablet') {
+			text-align: left;
+			max-width: 1082px;
+			margin: 0 auto;
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+	
+	.post {
+		padding-bottom: 15px;
+		
+		@include media ('>=tablet') {
+			padding: 0 15px 25px;
+			width: 50%;
+			display: flex;
+		}
+		
+		@include media ('>=desktop') {
+			padding: 0 27px 25px;
+		}
+	}
+	
+	.img-outer {
+		padding-bottom: 15px;
+		
+		@include media ('>=tablet') {
+			width: 50%;
+			padding-bottom: 0;
+		}
+	}
+	
+	.text-description {
+		padding: 34px 10px;
+		font-size: 12px;
+		color: $gray;
+		
+		@include media ('>=tablet') {
+			width: 50%;
+			padding: 10px 10px;
+		}
+		
+		@include media ('>=widescreen') {
+			padding: 34px 25px;
+		}
+	}
+	
+	.date{
+		display: block;
+		color: $gray;
+		font-size: 12px;
+		padding-bottom: 10px;
+		text-transform: uppercase;
+		
+		@include media ('>=tablet') {
+			padding: 3px 0 20px;
+		}
+	}
+	
+	h3 {
+		margin: 0 0 7px;
+		font-weight: 600;
+		margin: 0 0 6px;
+		line-height: 1;
+		
+		a {
+			color: $black;
+			
+			&:hover {
+				color: $gold;
+			}
+		}
+	}
+}
+

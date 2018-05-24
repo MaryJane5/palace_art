@@ -1,0 +1,177 @@
+#footer {
+	background-color: $black;
+	padding: 30px 0;
+
+	@include media ('>=tablet') {
+		padding: 53px 0;
+	}
+	
+	h4 {
+		color: rgba($gray,0.54);
+		font-weight: 400;
+		margin: 2px 0 15px;
+	}
+}
+
+.row-footer{
+	@include media ('>=tablet') {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 0 0 26px;
+	}
+	
+	.col-outer-first {
+		text-align: center;
+		
+		@include media ('>=tablet') {
+			width: 40%;
+			display: flex;
+			text-align: left;
+		}
+		
+		@include media ('>=desktop') {
+			padding: 0 20px 0 0;
+		}
+		
+		.col {
+			padding: 0 0 20px;
+
+			@include media ('>=tablet') {
+				width: 50%;
+				padding: 0 10px;
+			}
+			
+			&:first-child {
+				@include media ('>=tablet') {
+					padding: 0 10px;
+					width: 30%;
+				
+				}
+				
+				@include media ('>=desktop') {
+					padding: 0 15px 0 77px;
+					width: 50%;
+				}
+			}
+			
+			&:last-child {
+				@include media ('>=tablet') {
+					width: 70%;
+				}
+				
+				@include media ('>=desktop') {
+					width: 50%;
+				}
+			}
+		}
+	}
+
+	.col-outer-second {
+		padding-bottom: 35px;
+		display: flex;
+		text-align: center;
+
+		@include media ('>=tablet') {
+			width: 60%;
+			text-align: left;
+		}
+
+		.col {
+			width: 33.32%;
+			padding: 0 5px;
+				
+			@include media ('>=desktop') {
+				width: 25%;
+				padding: 0 10px;
+			}
+		}
+	}
+}
+
+.logo-footer {
+	display: block;
+	padding: 0 0 15px;
+	
+	@include media ('>=tablet') {
+		padding: 4px 0 0;
+	}
+}
+
+.slogan {
+	color: $gray;
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-family: $base-font-sans-serif;
+	padding: 0 0 17px;
+	display: block;
+}
+
+.contact-list {
+
+	li {
+		margin: 0 0 30px;
+		color: $gray;
+		font-size: 14px;
+		font-family: $font-Proxima-Nova;
+		font-weight: 400;
+		line-height: 1;
+
+		a {
+			color: #dad9d7;
+
+			&:hover {
+				color: $gold;
+			}
+		}
+	}
+
+	address {
+		color: $gray;
+		font-size: 12px;
+		line-height: 1.333;
+		font-style: normal;
+	}
+}
+
+.list-link {
+	
+	li {
+		margin: 0 0 3px;
+	}
+	
+	a {
+		color: rgba(218,217,215,0.5);
+		display: block;
+		font-family: $font-Proxima-Nova;
+		font-weight: 400;
+		line-height: 1;
+
+		&:hover {
+			color: $gold;
+		}
+	}
+}
+
+.copyright {
+	font-size: 12px;
+	color: $gray;
+	text-align: center;
+	line-height: 1;
+	display: block;
+
+	@include media ('>=tablet') {
+		padding: 0 103px 0 0;
+		text-align: right;
+	}
+}
+
+.col-last {
+	display: none;
+
+	@include media ('>=desktop') {
+		display: block;
+	}
+}
+
+
